@@ -1,0 +1,121 @@
+#Discover{
+display: grid;
+grid-template-columns: 1fr, 1fr;
+grid-template-rows: auto;
+grid-gap:30px;
+width: 500px;
+grid-template-areas:
+"img1 text1"
+"img2 text2";
+}
+#Discover .gallery-img{
+width: 500px;
+height: 300px;
+background-size: cover;
+background-position: center;
+cursor: pointer;
+}
+#Discover .img1{
+margin-left: 30px ;
+grid-area: img1;
+background-image: url("images/img1.png");
+border-radius: 30px;
+}
+#Discover .img2{
+    margin-left: 30px ;
+    grid-area: img2;
+    background-image: url("images/img2.png");
+    border-radius: 30px;
+    }
+.gallery-img div{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.9),rgb(255, 0, 0));
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transition: color 0.5s;
+    border-radius: 30px;
+}
+.gallery-img a{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+} 
+ .gallery-img div:hover{
+    opacity: 0.8;
+    transition: all ease-in-out 500ms;
+} 
+
+.img-window{
+    width: 100%;
+    height: 100vh;
+    background-color:rgba(0,0,0,0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+.img-window img{
+    max-width: 80vh;
+    max-height: 80vh;
+}
+.img-btn-prev{
+    border-bottom: 50px solid transparent;
+    border-top: 50px solid transparent;
+    border-right: 50px solid #000000;
+    border-left: 50px solid transparent;
+    position: fixed;
+    top: 280px;
+    z-index: 500;
+    cursor: pointer;
+}
+.img-btn-prev:hover{
+    opacity: 0.4;
+}
+.img-btn-next{
+    border-bottom: 50px solid transparent;
+    border-top: 50px solid transparent;
+    border-left: 50px solid #000000;
+    border-right: 50px solid transparent;
+    position: fixed;
+    top: 280px;
+    z-index: 500;
+    cursor: pointer;
+}
+.img-btn-next:hover{
+    opacity: 0.4;
+}
+.text1 li{
+margin: 20px;
+font-family: cursive;
+grid-area: text1;
+font-size: 30px;
+width: 500px;
+color: rgb(0, 255, 0);
+background-color: rgb(125, 13, 190);
+}
+.text1 li a{
+color: white;
+}
+#Discover .top{
+    margin-top: 0px;
+}
+.text2 li{
+    margin: 20px;
+font-family: cursive;
+grid-area: text1;
+font-size: 30px;
+width: 500px;
+color: rgb(0, 255, 0);
+background-color: rgb(125, 13, 190);}
+.text2 li a{
+color: white;
+}
